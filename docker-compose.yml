@@ -60,7 +60,7 @@ services:
         environment:
             MYSQL_USERNAME: "${DB_USERNAME}"
             MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
-            PHA_HOST: mysql
+            PMA_HOST: mysql
         networks:
             - sail
     redis:
