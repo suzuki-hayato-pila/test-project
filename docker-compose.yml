@@ -53,7 +53,7 @@ services:
             timeout: 5s
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
-        platform: linux/arm64/v8 # 追加
+        platform: linux/amd64 # これを設定
         links:
             - mysql:mysql
         ports:
