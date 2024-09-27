@@ -59,9 +59,13 @@ services:
         ports:
             - 8080:80
         environment:
-            MYSQL_USERNAME: "${DB_USERNAME}"
+            # MYSQL_USERNAME: "${DB_USERNAME}"
+            # MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+            # PMA_HOST: mysql
+            MYSQL_DATABASE: test-project # デフォルトで作成するデータベース名
+            MYSQL_USER: "${DB_USERNAME}" # 環境変数からユーザー名を取得
+            MYSQL_PASSWORD: "${DB_PASSWORD}" # 環境変数からパスワードを取得
             MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
-            PMA_HOST: mysql
         networks:
             - sail
     redis:
